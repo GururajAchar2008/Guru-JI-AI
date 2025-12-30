@@ -33,7 +33,7 @@ const sendMessage = async () => {
   const aiIndex = messages.length + 1;
   setMessages(prev => [...prev, { role: "assistant", content: "" }]);
 
-  const res = await fetch("https://guru-ji-ai-backend-2.onrender.com", {
+  const res = await fetch("https://guru-ji-ai-backend-2.onrender.com/api/chat", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ message: userMsg.content })
